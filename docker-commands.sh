@@ -1,13 +1,9 @@
-docker network create dev-network
+# Start docker compose
+docker compose up -d
 
-docker run -d --name some-mysql --network dev-network \
-	-e MYSQL_DATABASE=drupal \
-	-e MYSQL_USER=user \
-	-e MYSQL_PASSWORD=password \
-	-e MYSQL_ROOT_PASSWORD=password \
-	mysql:5.7
+# Navigate to forwarded port and plugin drupal setup info
 
-docker run --name some-drupal \
-	--network dev-network \
-	-v /workspaces/drupal-example-repo/src:/tmp \
-	-p 80:80 -d drupal
+# Exec into drupal container and copy /opt/drupal to local src directory
+
+# run mysql dump to get database dump
+docker exec -i drupal-example-repo-mysql-1 mysqldump -uroot -ppass1234 drupal > db_dump.sql
