@@ -9,7 +9,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userpasswd
     volumes:
-      - ./db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
+      - ./db/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
   drupal:
     container_name: drupal
     image: local-drupal:v1
