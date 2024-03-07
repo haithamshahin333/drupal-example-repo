@@ -9,4 +9,5 @@
 
 3. Upload sites directory to file share
 
-4. 
+# Resources
+- https://www.drupal.org/docs/administering-a-drupal-site/configuration-management/workflow-using-drush

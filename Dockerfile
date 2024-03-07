@@ -1,4 +1,5 @@
 FROM drupal:10
+
 RUN apt-get update \
     # Install libmagickwand-dev imagick package
     && apt-get install -y libmagickwand-dev git nano zip unzip dialog openssh-server \
